@@ -48,20 +48,20 @@
 	desc = "This path respects the justice and staying to your Mortal Nature, Hun. Preventing the grief of things and providing the justified judgement will bring you up, but if you fail to your desires - it's your fall."
 	tenets = list("judgement", "extinguish")
 	tenets_done = list("judgement" = 0, "extinguish" = 0)
-	fails = list("killfirst", "steal")
+	fails = list("killfirst", "steal", "desire")
 
 /datum/dharma/thrashing_dragon
 	name = "Thrashing Dragon (Yang)"
 	desc = "This path encourages to live with the light part of Circle, Yang. Live, love and laugh, save lives, meet your friends and lovers, clean the nature and grow it like a garden. However, killing, griefing and stealing leads you to the opposite."
-	tenets = list("meet", "cleangrow", "watchdie")
-	tenets_done = list("watchdie" = 0, "meet" = 0, "cleangrow" = 0)
-	fails = list("extinguish", "savelife")
+	tenets = list("meet", "cleangrow", "savelife")
+	tenets_done = list("savelife" = 0, "meet" = 0, "cleangrow" = 0)
+	fails = list("extinguish", "killfirst")
 
 /datum/dharma/flame_of_rising_phoenix
 	name = "Flame of the Rising Phoenix (Yang+Hun)"
 	desc = "This path is heretic amongst other kuei-jin, it doesn't use typical training and bases around morality. It encourages the kuei-jin to stay as close as possible to human, to the moral standards instead of High Mission. Save lives of mortals, meet the debts of mortal life and protect your fellows. But don't try to grief."
 	tenets = list("savelife", "meet", "protect")
-	tenets_done = list("savelife" = 0, "protect" = 0)
+	tenets_done = list("savelife" = 0, "meet" = 0, "protect" = 0)
 	fails = list("killfirst", "steal", "desire", "grief", "torture")
 
 /datum/dharma/proc/on_gain(mob/living/carbon/human/mob)
