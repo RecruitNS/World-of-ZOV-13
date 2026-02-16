@@ -339,7 +339,6 @@
 
 /datum/discipline_power/presence/entrancement/activate(mob/living/carbon/human/target)
 	. = ..()
-	var/mypower = secret_vampireroll(max(get_a_charisma(owner), get_a_appearance(owner))+get_a_empathy(owner), get_a_willpower(target), owner)
 	target.remove_overlay(MUTATIONS_LAYER)
 	var/mutable_appearance/presence_overlay = mutable_appearance('code/modules/wod13/icons.dmi', "presence", -MUTATIONS_LAYER)
 	presence_overlay.pixel_z = 1
@@ -355,17 +354,13 @@
 				E1.Grant(owner)
 				var/datum/action/presence_deaggro/E2 = new()
 				E2.Grant(owner)
-
 			N.presence_master = owner
-
 			N.presence_follow = TRUE
 			N.remove_movespeed_modifier(/datum/movespeed_modifier/npc)
 			owner.puppets |= N
-			var/initial_fights_anyway = N.fights_anyway
 			N.fights_anyway = TRUE
 			owner.say("Come with me...")
 
-			addtimer(CALLBACK(src, PROC_REF(presence_end), target, owner, initial_fights_anyway), 50 SECONDS * mypower)
 	else
 		var/obj/item/I1 = target.get_active_held_item()
 		var/obj/item/I2 = target.get_inactive_held_item()
