@@ -717,6 +717,9 @@
 //				return
 //		else
 //			return
+	if(isauspexavatar(src))
+		to_chat(usr, "<span class='boldnotice'>Твоя душа не может быть упокоена... Ты проклят.</span>")
+		return
 
 	if(!usr.can_respawn())
 
@@ -728,6 +731,7 @@
 			GLOB.respawn_timers[usr.client.ckey] = 0
 		else
 			return
+
 
 	log_game("[key_name(usr)] respawned.")
 
@@ -748,6 +752,7 @@
 		qdel(M)
 		return
 
+	usr << sound(null)
 	M.key = key
 
 

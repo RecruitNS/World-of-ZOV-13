@@ -97,10 +97,13 @@
 				if(H.clane.name == "Baali")
 					H.emote("scream")
 					H.pointed(user)
-	M.show_message("<span class='warning'><b>GOD SEES YOU!</b></span>", MSG_AUDIBLE)
+
+	var/affected_by_faith = (ishuman(M) && (iskindred(M) || isghoul(M) || isgarou(M) || iscathayan(M))) || iswerewolf(M)
+	if(affected_by_faith)
+		M.show_message("<span class='warning'><b>GOD SEES YOU!</b></span>", MSG_AUDIBLE)
 	var/distance = max(0,get_dist(get_turf(src),T))
 
-	if(M.flash_act(affect_silicon = 1))
+	if(affected_by_faith && M.flash_act(affect_silicon = 1))
 		M.Immobilize(max(10/max(1,distance), 5))
 
 /obj/item/card/id/hunter/attack(mob/living/target, mob/living/user)
@@ -336,8 +339,8 @@
 	icon_state = "id2"
 	access = list(7,8)
 
-/obj/item/card/id/police/chief
-	name = "police chief badge"
+/obj/item/card/id/police/lieutenant
+	name = "police lieutenant badge"
 	desc = "Sponsored by the Government. This one has a chrome plated finish."
 	access = list(7,8)
 
@@ -467,7 +470,7 @@
 	var/max_objective = 3
 
 	if(iskindred(owner) || isghoul(owner))
-		max_objective = 4
+		max_objective = 5
 
 	// Fourth if is for the vampire/ghouls since it is only their factions there
 
@@ -531,6 +534,29 @@
 				artefact_objective.owner = owner
 				objectives += artefact_objective
 				artefact_objective.update_explanation_text()
+		if(5)
+			var/datum/objective/secret/toknow
+			for(var/datum/objective/secret/S in GLOB.secrets_list)
+				if(S)
+					toknow = S
+			if(toknow)
+				var/datum/objective/reveal/secret_objective = new
+				secret_objective.owner = owner
+				secret_objective.secret_keeper = toknow.owner.current
+				owner.current.reveal_objective = secret_objective
+				secret_objective.secret_keeper_name = toknow.owner.current.true_real_name
+				objectives += secret_objective
+				secret_objective.update_explanation_text()
+			else
+				var/datum/objective/secret/secret_objective = new
+				secret_objective.owner = owner
+				secret_objective.thetruth = pick("Эпштейн связан с Камарильей.", "Анархи затевают захват города.", "Князь убил собственного Сира.", "В этом городе затерян саркофаг с Патриархом.", "Кланы против правления Князя.", "Гуй-дзин планируют саботаж всего города.", "Шабаш ожидает возвращение Каина.", "Власти начинают подозревать о сверхъестественном, скоро будет глобальная зачистка.")
+				objectives += secret_objective
+				GLOB.secrets_list += secret_objective
+				secret_objective.update_explanation_text()
+				var/datum/action/reveal_secret/infor = new()
+				infor.secret_objective = secret_objective
+				infor.Grant(owner.current)
 	return ..()
 
 /datum/antagonist/ambitious/on_removal()
@@ -543,6 +569,21 @@
 	owner.announce_objectives()
 //TZIMISCE ROLES
 
+/mob/living
+	var/datum/objective/reveal/reveal_objective
 
+/datum/action/reveal_secret
+	name = "Reveal Secret"
+	desc = "Reveal the truth..."
+	button_icon_state = "secret"
+	check_flags = AB_CHECK_CONSCIOUS
+	var/datum/objective/secret/secret_objective
 
-
+/datum/action/reveal_secret/Trigger()
+	if(owner.say("[secret_objective.thetruth]"))
+		secret_objective.truthkept = FALSE
+		for(var/mob/living/L in oviewers(7, owner))
+			if(L.reveal_objective)
+				if(L.reveal_objective.secret_keeper == owner)
+					to_chat(L, "<span class='alertsyndie'>Now you know the secret... [secret_objective.thetruth]</span>")
+					L.reveal_objective.truthrevealed = TRUE

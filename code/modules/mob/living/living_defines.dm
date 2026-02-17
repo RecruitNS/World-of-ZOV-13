@@ -54,6 +54,7 @@
 	var/hallucination = 0 ///Directly affects how long a mob will hallucinate for
 
 	var/last_wallbump = 0 //Cooldown for celerity wallbump
+	var/last_mobbump = 0 //Cooldown for celerity mobbump
 
 	var/last_special = 0 ///Used by the resist verb, likely used to prevent players from bypassing next_move by logging in/out.
 	var/timeofdeath = 0
@@ -256,6 +257,7 @@
 	var/datum/weakref/conditioner
 	var/conditioned = FALSE
 	var/last_masquerade_violation = 0
+	var/last_hunt_offer = 0
 	var/last_nonraid = 0
 	var/warrant = FALSE
 	var/ignores_warrant = FALSE

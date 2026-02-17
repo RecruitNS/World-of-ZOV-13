@@ -105,6 +105,9 @@
 	var/original_gender
 	var/original_headshot
 
+	var/original_isdwarf
+	var/original_istower
+
 	var/datum/dna/impersonating_dna
 	var/impersonating_name
 	var/impersonating_skintone
@@ -120,6 +123,14 @@
 	var/impersonating_age
 	var/impersonating_gender
 	var/impersonating_headshot
+
+	var/impersonating_clane
+	var/impersonating_faction
+	var/impersonating_job
+	var/impersonating_info
+
+	var/impersonating_isdwarf
+	var/impersonating_istower
 
 	var/is_shapeshifted = FALSE
 
@@ -293,7 +304,13 @@
 				owner.dna.copy_dna(impersonating_dna)
 				impersonating_headshot = victim.headshot_link
 
+				impersonating_clane = victim.clane
+				impersonating_faction = victim.vampire_faction
+				impersonating_job = victim.job
+				impersonating_info = victim.info_known
 
+				impersonating_isdwarf = victim.isdwarfy
+				impersonating_istower = victim.istower
 			if(2 to 3)
 				impersonating_haircolor = victim.hair_color
 				impersonating_facialhaircolor = victim.facial_hair_color
@@ -301,7 +318,6 @@
 				if (victim.clane)
 					impersonating_alt_sprite = victim.clane.alt_sprite
 					impersonating_alt_sprite_greyscale = victim.clane.alt_sprite_greyscale
-
 			if(4 to INFINITY)
 				impersonating_eyecolor = victim.eye_color
 				impresonating_phonevoicetag = victim.phonevoicetag
@@ -333,6 +349,8 @@
 	original_headshot = owner.headshot_link
 	original_gender = owner.gender
 
+	original_isdwarf = owner.isdwarfy
+	original_istower = owner.istower
 
 	impersonating_hairstyle = owner.hairstyle
 	impersonating_name = owner.real_name
@@ -347,6 +365,14 @@
 	impersonating_headshot = owner.headshot_link
 	impersonating_alt_sprite = owner.clane.alt_sprite
 	impersonating_alt_sprite_greyscale = owner.clane.alt_sprite_greyscale
+
+	impersonating_clane = null
+	impersonating_faction = null
+	impersonating_job = null
+	impersonating_info = null
+
+	impersonating_isdwarf = owner.isdwarfy
+	impersonating_istower = owner.istower
 
 /datum/discipline_power/vicissitude/malleable_visage/proc/shapeshift(to_original = FALSE, instant = FALSE)
 	var/fleshcrafting = get_a_fleshcraft(owner)
@@ -391,6 +417,17 @@
 		owner.headshot_link = original_headshot
 		is_shapeshifted = FALSE
 		owner.switch_masquerade(owner)
+
+		if(owner.isdwarfy)
+			owner.RemoveElement(/datum/element/dwarfism)
+		if(owner.istower)
+			owner.RemoveElement(/datum/element/giantism)
+		owner.isdwarfy = original_isdwarf
+		owner.istower = original_istower
+		if(owner.isdwarfy)
+			owner.AddElement(/datum/element/dwarfism)
+		if(owner.istower)
+			owner.AddElement(/datum/element/giantism)
 	else
 		//Nosferatu, Cappadocians, Gargoyles, Kiasyd, etc. will revert instead of being indefinitely without their curse
 		if(original_alt_sprite)
@@ -414,6 +451,17 @@
 		owner.headshot_link = impersonating_headshot
 		is_shapeshifted = TRUE
 		owner.switch_masquerade(owner)
+
+		if(owner.isdwarfy)
+			owner.RemoveElement(/datum/element/dwarfism)
+		if(owner.istower)
+			owner.RemoveElement(/datum/element/giantism)
+		owner.isdwarfy = impersonating_isdwarf
+		owner.istower = impersonating_istower
+		if(owner.isdwarfy)
+			owner.AddElement(/datum/element/dwarfism)
+		if(owner.istower)
+			owner.AddElement(/datum/element/giantism)
 
 	owner.update_body()
 
@@ -467,6 +515,7 @@
 	owner.mind.teach_crafting_recipe(/datum/crafting_recipe/tzi_unicorn)
 	owner.mind.teach_crafting_recipe(/datum/crafting_recipe/tzi_eyes)
 	owner.mind.teach_crafting_recipe(/datum/crafting_recipe/tzi_implant)
+	owner.mind.teach_crafting_recipe(/datum/crafting_recipe/tzi_venom)
 
 //BONECRAFTING
 /datum/discipline_power/vicissitude/bonecrafting
@@ -522,6 +571,10 @@
 	owner.mind.teach_crafting_recipe(/datum/crafting_recipe/tzi_biter)
 	owner.mind.teach_crafting_recipe(/datum/crafting_recipe/tzi_fister)
 	owner.mind.teach_crafting_recipe(/datum/crafting_recipe/tzi_tanker)
+	owner.mind.teach_crafting_recipe(/datum/crafting_recipe/cattzi)
+	owner.mind.teach_crafting_recipe(/datum/crafting_recipe/axetzi)
+	owner.mind.teach_crafting_recipe(/datum/crafting_recipe/tzi_blade)
+
 
 /datum/action/basic_vicissitude
 	name = "Vicissitude Upgrade"
@@ -535,6 +588,7 @@
 	var/original_skin_tone
 	var/original_hairstyle
 	var/original_body_mod
+	var/list/basic = list("Skin armor", "Centipede legs", "Second pair of arms", "Leather wings")
 
 /datum/action/basic_vicissitude/Trigger()
 	. = ..()
@@ -556,7 +610,7 @@
 
 /datum/action/basic_vicissitude/proc/give_upgrade()
 	var/mob/living/carbon/human/user = owner
-	var/upgrade = input(owner, "Choose basic upgrade:", "Vicissitude Upgrades") as null|anything in list("Skin armor", "Centipede legs", "Second pair of arms", "Leather wings")
+	var/upgrade = input(owner, "Choose basic upgrade:", "Vicissitude Upgrades") as null|anything in basic
 	if(!upgrade)
 		return
 	to_chat(user, span_notice("You begin molding your flesh and bone into a stronger form..."))
@@ -587,6 +641,7 @@
 			user.overlays_standing[PROTEAN_LAYER] = upgrade_overlay
 			user.apply_overlay(PROTEAN_LAYER)
 			user.add_movespeed_modifier(/datum/movespeed_modifier/centipede)
+			basic -= "Centipede legs"
 		if("Second pair of arms")
 			var/limbs = user.held_items.len
 			user.change_number_of_hands(limbs + 2)
@@ -628,6 +683,7 @@
 				QDEL_NULL(upgrade_overlay)
 				user.remove_movespeed_modifier(/datum/movespeed_modifier/centipede)
 				selected_upgrade -= upgrade
+				basic += "Centipede legs"
 			if("Second pair of arms")
 				var/limbs = user.held_items.len
 				user.change_number_of_hands(limbs - 2)
@@ -651,12 +707,32 @@
 	level = 4
 	vitae_cost = 2
 	violates_masquerade = TRUE
+	var/possible_shape = list(/mob/living/simple_animal/hostile/tzimisce_beast, \
+	/mob/living/simple_animal/hostile/tzimisce_beast/mouth)
+	var/shapeshift_type = null
+
+/datum/discipline_power/vicissitude/horrid_form/pre_activation_checks(mob/living/target)
+	if(!shapeshift_type)
+		var/list/animal_list = list()
+		var/list/display_shapes = list()
+		for(var/path in possible_shape)
+			var/mob/living/simple_animal/animal = path
+			animal_list[initial(animal.name)] = path
+			var/image/animal_image = image(icon = initial(animal.icon), icon_state = initial(animal.icon_state))
+			display_shapes += list(initial(animal.name) = animal_image)
+		sortList(display_shapes)
+		var/new_shapeshift_type = show_radial_menu(owner, owner, display_shapes, custom_check = CALLBACK(src, PROC_REF(check_menu), owner), radius = 38, require_near = TRUE)
+		if(!new_shapeshift_type)
+			return FALSE
+		shapeshift_type = new_shapeshift_type
+		shapeshift_type = animal_list[shapeshift_type]
+	return TRUE
 
 
 /datum/discipline_power/vicissitude/horrid_form/activate()
 	. = ..()
 	var/datum/warform/Warform = new
-	Warform.transform(/mob/living/simple_animal/hostile/tzimisce_beast, owner, TRUE)
+	Warform.transform(shapeshift_type, owner, TRUE)
 
 /datum/discipline_power/vicissitude/horrid_form/post_gain()
 	. = ..()
@@ -664,6 +740,10 @@
 		return
 	owner.mind.teach_crafting_recipe(/datum/crafting_recipe/tzi_heart)
 	owner.mind.teach_crafting_recipe(/datum/crafting_recipe/tzi_med)
+	owner.mind.teach_crafting_recipe(/datum/crafting_recipe/tzicreature)
+	owner.mind.teach_crafting_recipe(/datum/crafting_recipe/tzi_venom)
+
+
 //BLOODFORM
 /datum/discipline_power/vicissitude/bloodform
 	name = "Bloodform"
@@ -683,6 +763,8 @@
 /obj/item/organ/cyberimp/arm/surgery/vicissitude
 	icon_state = "toolkit_implant_vic"
 	contents = newlist(/obj/item/retractor/augment/vicissitude, /obj/item/hemostat/augment/vicissitude, /obj/item/cautery/augment/vicissitude, /obj/item/surgicaldrill/augment/vicissitude, /obj/item/scalpel/augment/vicissitude, /obj/item/circular_saw/augment/vicissitude, /obj/item/surgical_drapes/vicissitude)
+	implant_sound = 'code/modules/wod13/sounds/Tzim_Organ.ogg'
+
 
 /obj/item/retractor/augment/vicissitude
 	name = "retracting appendage"
@@ -747,3 +829,57 @@
 	lefthand_file = 'code/modules/wod13/righthand.dmi'
 	righthand_file = 'code/modules/wod13/lefthand.dmi'
 	masquerade_violating = TRUE
+
+/obj/item/organ/cyberimp/arm/tzimisce
+	name = "armblade implant"
+	desc = "A concealed serrated bone blade."
+	icon = 'code/modules/wod13/weapons.dmi'
+	icon_state = "armblade"
+	zone = BODY_ZONE_L_ARM
+	contents = newlist(/obj/item/melee/vampirearms/tzimisce)
+	implant_sound = 'code/modules/wod13/sounds/Tzim_Organ.ogg'
+
+/obj/item/organ/cyberimp/arm/tzimisce/venom
+	name = "nematocyst whip implant"
+	desc = "A concealed venomous whip."
+	icon = 'code/modules/wod13/48x32weapons.dmi'
+	icon_state = "zhalo"
+	contents = newlist(/obj/item/melee/vampirearms/tzimisce/venom)
+
+/obj/item/melee/vampirearms/tzimisce
+	name = "armblade"
+	desc = "A monstrous weapon, made out of sharpened bone."
+	icon = 'code/modules/wod13/weapons.dmi'
+	icon_state = "armblade"
+	force = 35
+	w_class = WEIGHT_CLASS_BULKY
+	block_chance = 40
+	armour_penetration = 40
+	sharpness = SHARP_EDGED
+	attack_verb_continuous = list("slashes", "cuts")
+	attack_verb_simple = list("slash", "cut")
+	hitsound = 'sound/weapons/rapierhit.ogg'
+	wound_bonus = 5
+	bare_wound_bonus = 25
+	resistance_flags = FIRE_PROOF
+	masquerade_violating = TRUE
+
+/obj/item/melee/vampirearms/tzimisce/venom
+	name = "nematocyst whip"
+	desc = "An elongated tendril covered with stinging cells."
+	icon = 'code/modules/wod13/48x32weapons.dmi'
+	icon_state = "zhalo"
+	damtype = TOX
+	force = 20
+	w_class = WEIGHT_CLASS_BULKY
+	block_chance = 10
+	armour_penetration = 10
+	sharpness = SHARP_NONE
+	attack_verb_continuous = list("slashes", "cuts")
+	attack_verb_simple = list("slash", "cut")
+	hitsound = 'sound/weapons/rapierhit.ogg'
+	wound_bonus = 0
+	bare_wound_bonus = 0
+	resistance_flags = FIRE_PROOF
+	masquerade_violating = TRUE
+

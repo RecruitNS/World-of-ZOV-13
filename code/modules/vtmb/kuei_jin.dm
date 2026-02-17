@@ -42,6 +42,11 @@
 			else if(yin_chi < max_yin_chi)
 				yin_chi = min(yin_chi+1, max_yin_chi)
 
+/mob/living/Move()
+	. = ..()
+	if(mind?.dharma?.chi_check(src))
+		adjustFireLoss(80, TRUE, FALSE)
+
 /datum/species/kuei_jin
 	name = "Kuei-Jin"
 	id = "kuei-jin"
@@ -231,6 +236,10 @@
 		if (werewolf_victim.auspice?.gnosis > 0)
 			has_gnosis = TRUE
 
+	if(!do_mob(kueijin, victim, 5 SECONDS))
+		return
+
+
 	//this method of feeding targets splat-specific Quintessence sources first
 	if ((iskindred(victim) || isghoul(victim)) && (victim.bloodpool > 0)) //drain vitae bloodpool
 		victim.bloodpool = max(0, victim.bloodpool - 1)
@@ -331,7 +340,9 @@
 	SEND_SOUND(usr, sound('code/modules/wod13/sounds/chi_use.ogg', 0, 0, 75))
 	kueijin.visible_message("<span class='warning'>Some of [kueijin]'s visible injuries disappear!</span>", "<span class='warning'>Some of your injuries disappear!</span>")
 
-	for (var/i in 1 to 5)
+	var/heal_level = min(kueijin.mind.dharma.level, 4)
+
+	for (var/i in 1 to heal_level)
 		if(length(kueijin.all_wounds))
 			var/datum/wound/wound = pick(kueijin.all_wounds)
 			wound.remove_wound()
@@ -346,7 +357,6 @@
 	if(brain)
 		brain.applyOrganDamage(-100)
 
-	var/heal_level = min(kueijin.mind.dharma.level, 4)
 	kueijin.heal_ordered_damage(20 * heal_level, list(OXY, STAMINA, BRUTE, TOX))
 	kueijin.heal_ordered_damage(5 * heal_level, list(BURN, CLONE))
 	kueijin.blood_volume = min(kueijin.blood_volume + 56, 560)
@@ -386,7 +396,9 @@
 	SEND_SOUND(usr, sound('code/modules/wod13/sounds/chi_use.ogg', 0, 0, 75))
 	kueijin.visible_message("<span class='warning'>Some of [kueijin]'s visible injuries disappear!</span>", "<span class='warning'>Some of your injuries disappear!</span>")
 
-	for (var/i in 1 to 5)
+	var/heal_level = min(kueijin.mind.dharma.level, 4)
+
+	for (var/i in 1 to heal_level)
 		if(length(kueijin.all_wounds))
 			var/datum/wound/wound = pick(kueijin.all_wounds)
 			wound.remove_wound()
@@ -401,7 +413,6 @@
 	if(brain)
 		brain.applyOrganDamage(-100)
 
-	var/heal_level = min(kueijin.mind.dharma.level, 4)
 	kueijin.heal_ordered_damage(10 * heal_level, list(OXY, STAMINA, BRUTE, TOX))
 	kueijin.heal_ordered_damage(2.5 * heal_level, list(BURN, CLONE))
 	kueijin.blood_volume = min(kueijin.blood_volume + 28, 560)

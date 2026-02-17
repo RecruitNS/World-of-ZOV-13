@@ -318,7 +318,6 @@
 	maxHealth = 75
 	health = 75
 
-	harm_intent_damage = 8
 	obj_damage = 50
 	melee_damage_lower = 20
 	melee_damage_upper = 20
@@ -368,7 +367,6 @@
 	maxHealth = 125
 	health = 125
 	butcher_results = list(/obj/item/stack/human_flesh = 2)
-	harm_intent_damage = 5
 	melee_damage_lower = 30
 	melee_damage_upper = 30
 	attack_verb_continuous = "punches"
@@ -395,7 +393,6 @@
 	maxHealth = 350
 	health = 350
 	butcher_results = list(/obj/item/stack/human_flesh = 4)
-	harm_intent_damage = 5
 	melee_damage_lower = 25
 	melee_damage_upper = 25
 	attack_verb_continuous = "slashes"
@@ -422,7 +419,6 @@
 	maxHealth = 400
 	health = 400
 	butcher_results = list(/obj/item/stack/human_flesh = 10)
-	harm_intent_damage = 5
 	melee_damage_lower = 40
 	melee_damage_upper = 40
 	attack_verb_continuous = "slashes"
@@ -465,7 +461,6 @@
 	maxHealth = 400
 	health = 400
 	butcher_results = list(/obj/item/stack/human_flesh = 10)
-	harm_intent_damage = 5
 	melee_damage_lower = 25
 	melee_damage_upper = 45
 	attack_verb_continuous = "punches"
@@ -515,7 +510,7 @@
 	G.petrify(50)
 
 /mob/living/simple_animal/hostile/tzimisce_beast
-	name = "Tzimisce Beast Form"
+	name = "Four hand creature"
 	desc = "The peak of abominations armor. Unbelievably undamagable..."
 	icon = 'code/modules/wod13/48x64.dmi'
 	icon_state = "4armstzi"
@@ -525,11 +520,10 @@
 	mob_size = MOB_SIZE_HUGE
 //	AIStatus = AI_OFF
 	speak_chance = 0
-	speed = -1
+	speed = -0.2
 	maxHealth = 575
 	health = 575
 	butcher_results = list(/obj/item/stack/human_flesh = 10)
-	harm_intent_damage = 5
 	melee_damage_lower = 35
 	melee_damage_upper = 50
 	attack_verb_continuous = "slashes"
@@ -541,6 +535,15 @@
 	bloodpool = 10
 	maxbloodpool = 10
 	dodging = TRUE
+	see_in_dark = 7
+
+/mob/living/simple_animal/hostile/tzimisce_beast/mouth
+	name = "Four claw creature"
+	icon = 'code/modules/wod13/64x64.dmi'
+	icon_state = "weretzi"
+	speed = -0.7
+	melee_damage_lower = 25
+	melee_damage_upper = 40
 
 /mob/living/simple_animal/hostile/bloodcrawler
 	name = "Tzimisce Blood Form"
@@ -554,7 +557,6 @@
 	maxHealth = 100
 	health = 100
 	butcher_results = list(/obj/item/stack/human_flesh = 1)
-	harm_intent_damage = 5
 	melee_damage_lower = 10
 	melee_damage_upper = 10
 	attack_verb_continuous = "slashes"
@@ -566,6 +568,7 @@
 	minbodytemp = 0
 	bloodpool = 20
 	maxbloodpool = 20
+	see_in_dark = 6
 
 /mob/living/simple_animal/hostile/biter/hostile
 	faction = list("hostile")
@@ -678,4 +681,18 @@
 			if(additional_armor)
 				H.unique_body_sprite = "tziarmor"
 				H.update_body()
+
+
+/obj/structure/tzijelly
+	name = "jelly thing"
+	desc = "an important part of the meat matrix."
+	icon = 'code/modules/wod13/icons.dmi'
+	icon_state = "tzijelly"
+	plane = GAME_PLANE
+	layer = ABOVE_MOB_LAYER
+	anchored = TRUE
+	density = TRUE
+	max_integrity = 100
+	obj_integrity = 100
+
 
