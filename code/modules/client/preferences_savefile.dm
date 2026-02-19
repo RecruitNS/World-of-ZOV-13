@@ -483,6 +483,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["eye_color"], eye_color)
 	READ_FILE(S["skin_tone"], skin_tone)
 	READ_FILE(S["hairstyle_name"], hairstyle)
+	READ_FILE(S["blood_type"], blood_type)
 	READ_FILE(S["facial_style_name"], facial_hairstyle)
 	READ_FILE(S["underwear"], underwear)
 	READ_FILE(S["underwear_color"], underwear_color)
@@ -602,6 +603,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		facial_hairstyle			= sanitize_inlist(facial_hairstyle, GLOB.facial_hairstyles_list)
 		underwear		= sanitize_inlist(underwear, GLOB.underwear_list)
 		undershirt 		= sanitize_inlist(undershirt, GLOB.undershirt_list)
+
+	blood_type		= sanitize_inlist(blood_type, GLOB.blood_types)
 
 	breed			= sanitize_inlist(breed, list(BREED_HOMID, BREED_LUPUS, BREED_METIS, BREED_CORVID))
 	werewolf_color	= sanitize_inlist(werewolf_color, list("black", "gray", "red", "white", "ginger", "brown"))
@@ -891,6 +894,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["total_age"]	, total_age)
 	WRITE_FILE(S["hair_color"]			, hair_color)
 	WRITE_FILE(S["facial_hair_color"]			, facial_hair_color)
+	WRITE_FILE(S["blood_type"]			, blood_type)
 	WRITE_FILE(S["eye_color"]			, eye_color)
 	WRITE_FILE(S["skin_tone"]			, skin_tone)
 	WRITE_FILE(S["hairstyle_name"]			, hairstyle)

@@ -4,8 +4,9 @@
 
 /obj/effect/particle_effect/smoke
 	name = "smoke"
-	icon = 'icons/effects/96x96.dmi'
-	icon_state = "smoke"
+//	icon = 'icons/effects/96x96.dmi'
+	icon = 'code/modules/wod13/fog.dmi'
+	icon_state = "fog"
 	pixel_x = -32
 	pixel_y = -32
 	opacity = FALSE
@@ -34,7 +35,17 @@
 	. = ..()
 	create_reagents(500)
 	START_PROCESSING(SSobj, src)
-
+	var/matrix/M1 = matrix()
+	M1.Turn(4)
+	var/matrix/M2 = matrix()
+	M2.Turn(8)
+	M2.Scale(2,2)
+	if(prob(50))
+		animate(src, transform = M1, time = 10 SECONDS, loop = -1, easing = SINE_EASING, delay = rand(1, 5))
+		animate(transform = M2, time = 15 SECONDS)
+	else
+		animate(src, transform = M2, time = 15 SECONDS, loop = -1, easing = SINE_EASING, delay = rand(1, 15))
+		animate(transform = M1, time = 10 SECONDS)
 
 /obj/effect/particle_effect/smoke/Destroy()
 	STOP_PROCESSING(SSobj, src)

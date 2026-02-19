@@ -1,6 +1,7 @@
 /obj/item/grenade/flashbang
 	name = "flashbang"
 	icon_state = "flashbang"
+	icon = 'code/modules/wod13/grenade.dmi'
 	inhand_icon_state = "flashbang"
 	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
