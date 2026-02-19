@@ -1749,7 +1749,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						return
 					if (alert("Are you sure you want to change your Priorities? This will reset your Attributes.", "Confirmation", "Yes", "No") != "Yes")
 						return
-					var/new_priorities = input(user, "Select a Discipline", "Discipline Selection") as null|anything in list("Physical, Social, Mental", "Physical, Mental, Social", "Social, Physical, Mental", "Social, Mental, Physical", "Mental, Social, Physical", "Mental, Physical, Social")
+					var/new_priorities = input(user, "Select a Priority Order", "Priority Selection") as null|anything in list("Physical, Social, Mental", "Physical, Mental, Social", "Social, Physical, Mental", "Social, Mental, Physical", "Mental, Social, Physical", "Mental, Physical, Social")
 					if(new_priorities)
 						switch(new_priorities)
 							if("Physical, Social, Mental")
