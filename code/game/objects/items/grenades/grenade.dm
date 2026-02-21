@@ -6,6 +6,7 @@
 	icon_state = "grenade"
 	inhand_icon_state = "flashbang"
 	worn_icon_state = "grenade"
+	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
 	throw_speed = 3
@@ -107,7 +108,7 @@
 	active = TRUE
 	icon_state = initial(icon_state) + "_active"
 	SEND_SIGNAL(src, COMSIG_GRENADE_ARMED, det_time, delayoverride)
-	addtimer(CALLBACK(src, PROC_REF(detonate)), isnull(delayoverride)? det_time : delayoverride)
+//	addtimer(CALLBACK(src, PROC_REF(detonate)), isnull(delayoverride)? det_time : delayoverride)
 
 /**
  * detonate (formerly prime) refers to when the grenade actually delivers its payload (whether or not a boom/bang/detonation is involved)
@@ -180,3 +181,18 @@
 	. = ..()
 	if(active)
 		user.throw_item(target)
+
+/obj/item/grenade/throw_at()
+	. = ..()
+	if(active)
+		addtimer(CALLBACK(src, PROC_REF(detonate)), det_time)
+
+/obj/item/grenade/dropped(mob/M)
+	. = ..()
+	if(active)
+		addtimer(CALLBACK(src, PROC_REF(detonate)), det_time)
+/obj/item/grenade/equipped(mob/M, slot)
+	. = ..()
+	if(active && !(slot == ITEM_SLOT_HANDS))
+		addtimer(CALLBACK(src, PROC_REF(detonate)), det_time)
+

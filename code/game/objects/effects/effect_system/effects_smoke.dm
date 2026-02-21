@@ -15,9 +15,10 @@
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	animate_movement = FALSE
 	var/amount = 4
-	var/lifetime = 5
+	var/lifetime = 40
 	var/opaque = 1 //whether the smoke can block the view when in enough amount
-
+	var/matrix/M1
+	var/matrix/M2
 
 /obj/effect/particle_effect/smoke/proc/fade_out(frames = 16)
 	if(alpha == 0) //Handle already transparent case
@@ -35,17 +36,20 @@
 	. = ..()
 	create_reagents(500)
 	START_PROCESSING(SSobj, src)
-	var/matrix/M1 = matrix()
+	M1 = matrix()
+
 	M1.Turn(4)
-	var/matrix/M2 = matrix()
+
+	M2 = matrix()
+
 	M2.Turn(8)
-	M2.Scale(2,2)
+	M2.Scale(2.5,2.5)
 	if(prob(50))
-		animate(src, transform = M1, time = 10 SECONDS, loop = -1, easing = SINE_EASING, delay = rand(1, 5))
-		animate(transform = M2, time = 15 SECONDS)
+		animate(src, transform = M1, time = 10 SECONDS, loop = -1, easing = QUAD_EASING|EASE_OUT, delay = 2)
+		animate(transform = M2, time = 15 SECONDS, easing = SINE_EASING|EASE_OUT)
 	else
-		animate(src, transform = M2, time = 15 SECONDS, loop = -1, easing = SINE_EASING, delay = rand(1, 15))
-		animate(transform = M1, time = 10 SECONDS)
+		animate(src, transform = M2, time = 15 SECONDS, easing = SINE_EASING|EASE_IN, delay = 2)
+		animate(transform = M1, time = 10 SECONDS, loop = -1, easing = SINE_EASING|EASE_OUT)
 
 /obj/effect/particle_effect/smoke/Destroy()
 	STOP_PROCESSING(SSobj, src)
@@ -54,7 +58,7 @@
 /obj/effect/particle_effect/smoke/proc/kill_smoke()
 	STOP_PROCESSING(SSobj, src)
 	INVOKE_ASYNC(src, PROC_REF(fade_out))
-	QDEL_IN(src, 10)
+	QDEL_IN(src, 2 MINUTES)
 
 /obj/effect/particle_effect/smoke/process()
 	lifetime--
@@ -128,6 +132,34 @@
 	if(S.amount)
 		S.spread_smoke()
 
+
+/////////////////////////////////////////////
+// Dust
+/////////////////////////////////////////////
+
+/obj/effect/particle_effect/smoke/dust
+	name = "dust"
+	color = "#a4a4a4"
+	alpha = 186
+	lifetime = 10
+	var/matrix/M3
+
+/obj/effect/particle_effect/smoke/dust/Initialize(mapload)
+	create_reagents(500)
+	START_PROCESSING(SSobj, src)
+	M3 = matrix()
+	M3.Scale(3, 3)
+	M1 = matrix()
+	M1.Turn(5)
+	M2 = matrix()
+	M2.Turn(15)
+	M2.Scale(0.5,0.5)
+	if(prob(50))
+		animate(src, transform = M1, time = 5 SECONDS, loop = -1, easing = QUAD_EASING|EASE_OUT)
+		animate(transform = M2, time = 45 SECONDS, easing = SINE_EASING|EASE_OUT)
+	else
+		animate(src, transform = M2, time = 45 SECONDS, easing = SINE_EASING|EASE_IN)
+		animate(transform = M1, time = 10 SECONDS, loop = -1, easing = SINE_EASING|EASE_OUT)
 
 /////////////////////////////////////////////
 // Bad smoke
