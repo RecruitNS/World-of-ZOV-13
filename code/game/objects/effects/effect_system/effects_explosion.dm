@@ -33,6 +33,7 @@
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	var/obj/effect/explosion_light/L
 	var/obj/effect/particle_effect/smoke/dust/D
+	var/obj/effect/temp_visual/dir_setting/crack_effect/C
 	var/turf/position
 //	pixel_x = -32
 //	pixel_y = -32
@@ -40,12 +41,11 @@
 /obj/effect/explosion/Initialize(mapload)
 	. = ..()
 	L = new (loc)
+	C = new (loc)
 	set_light(4, 3, "#fffc97")
 	QDEL_IN(L, 3)
 	QDEL_IN(src, 7)
-	for(var/i = 0 to 20)
-		position = get_step(src, EAST)
-		D = new (position)
+	D = new (loc)
 
 
 /datum/effect_system/explosion

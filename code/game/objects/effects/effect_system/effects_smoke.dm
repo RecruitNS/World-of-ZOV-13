@@ -140,7 +140,7 @@
 /obj/effect/particle_effect/smoke/dust
 	name = "dust"
 	color = "#a4a4a4"
-	alpha = 186
+	alpha = 64
 	lifetime = 10
 	var/matrix/M3
 
@@ -156,10 +156,12 @@
 	M2.Scale(0.5,0.5)
 	if(prob(50))
 		animate(src, transform = M1, time = 5 SECONDS, loop = -1, easing = QUAD_EASING|EASE_OUT)
-		animate(transform = M2, time = 45 SECONDS, easing = SINE_EASING|EASE_OUT)
+		animate(src,transform = M2, time = 45 SECONDS, easing = SINE_EASING|EASE_OUT)
+		animate(src, alpha = 0, time = 45 SECONDS, easing = SINE_EASING|EASE_OUT)
 	else
 		animate(src, transform = M2, time = 45 SECONDS, easing = SINE_EASING|EASE_IN)
-		animate(transform = M1, time = 10 SECONDS, loop = -1, easing = SINE_EASING|EASE_OUT)
+		animate(src,transform = M1, time = 10 SECONDS, loop = -1, easing = SINE_EASING|EASE_OUT)
+		animate(src, alpha = 0, time = 45 SECONDS, easing = SINE_EASING|EASE_OUT)
 
 /////////////////////////////////////////////
 // Bad smoke
