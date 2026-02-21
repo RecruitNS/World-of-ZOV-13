@@ -76,8 +76,11 @@
 	transfer_to.adjustToxLoss(round((transfer_from.getToxLoss() / 100) * percentage) - transfer_to.getToxLoss())
 	transfer_to.adjustCloneLoss(round((transfer_from.getCloneLoss() / 100) * percentage) - transfer_to.getCloneLoss())
 
-	transfer_from.fire_stacks = transfer_to.fire_stacks
-	transfer_from.on_fire = transfer_to.on_fire
+	if(transfer_from.on_fire)
+		transfer_to.fire_stacks = transfer_from.fire_stacks
+		transfer_to.on_fire = TRUE
+	else
+		transfer_to.extinguish_mob()
 
 	// Will kill or revive forms on transformation as necessary
 	transfer_to.set_stat(transfer_from.stat)
@@ -87,6 +90,12 @@
 
 	// Transfer resting or standing between forms
 	transfer_to.set_resting(transfer_from.resting)
+	if(transfer_from.body_position == LYING_DOWN)
+		transfer_to.set_body_position(LYING_DOWN)
+		transfer_to.set_lying_angle(transfer_from.lying_angle)
+	else
+		transfer_to.set_body_position(STANDING_UP)
+		transfer_to.set_lying_angle(0)
 
 	transfer_organ_states(transfer_from, transfer_to)
 
@@ -374,6 +383,7 @@
 	animate(trans, transform = null, color = "#FFFFFF", time = 1)
 	lupus.update_icons()
 	lupus.mind.current = lupus
+	lupus.mind.current.update_willpower_icon()
 	if(lupus.hispo)
 		lupus.remove_movespeed_modifier(/datum/movespeed_modifier/lupusform)
 		lupus.add_movespeed_modifier(/datum/movespeed_modifier/crinosform)
@@ -414,6 +424,7 @@
 	animate(trans, transform = null, color = "#FFFFFF", time = 1)
 	crinos.update_icons()
 	crinos.mind.current = crinos
+	crinos.mind.current.update_willpower_icon()
 
 /datum/werewolf_holder/transformation/proc/transform_cor_crinos(mob/living/carbon/trans, mob/living/carbon/werewolf/corax/corax_crinos/cor_crinos, bypass)
 	PRIVATE_PROC(TRUE)
@@ -452,6 +463,7 @@
 	animate(trans, transform = null, color = "#FFFFFF", time = 1)
 	cor_crinos.update_icons()
 	cor_crinos.mind.current = cor_crinos
+	cor_crinos.mind.current.update_willpower_icon()
 
 /datum/werewolf_holder/transformation/proc/transform_homid(mob/living/carbon/trans, mob/living/carbon/human/homid, bypass)
 	PRIVATE_PROC(TRUE)
@@ -488,6 +500,7 @@
 	animate(trans, transform = null, color = "#FFFFFF", time = 1)
 	homid.update_body()
 	homid.mind.current = homid
+	homid.mind.current.update_willpower_icon()
 
 /datum/werewolf_holder/transformation/proc/transform_corvid(mob/living/carbon/trans, mob/living/carbon/werewolf/lupus/corvid/corvid, bypass)
 	PRIVATE_PROC(TRUE)
@@ -525,6 +538,7 @@
 	animate(trans, transform = null, color = "#FFFFFF", time = 1)
 	corvid.update_icons()
 	corvid.mind.current = corvid
+	corvid.mind.current.update_willpower_icon()
 	if(corvid.hispo) // shouldn't ever be called, but you know..
 		corvid.remove_movespeed_modifier(/datum/movespeed_modifier/lupusform)
 		corvid.add_movespeed_modifier(/datum/movespeed_modifier/crinosform)
@@ -564,6 +578,8 @@
 		warform.bloodpool = humanform.bloodpool
 		warform.maxbloodpool = humanform.maxbloodpool
 		warform.generation = humanform.generation
+		if(H.mind?.current)
+			H.mind.current.update_willpower_icon()
 
 		var/datum/action/end_warform/R = new
 		R.Grant(H)
@@ -585,6 +601,8 @@
 //	var/matrix/ntransform = matrix()
 //	ntransform.Scale(0.75, 0.5)
 	Shapeshift.Restore(Shapeshift.myshape)
+	if(humanform.mind?.current)
+		humanform.mind.current.update_willpower_icon()
 	for(var/datum/action/end_warform/W in humanform.actions)
 		if(W)
 			W.Remove(humanform)
