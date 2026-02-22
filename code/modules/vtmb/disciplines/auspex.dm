@@ -462,8 +462,8 @@ GLOBAL_LIST_EMPTY(auspex_users)
 /* ATOM */
 /atom/proc/auspex_moment(mob/user)
 	for(var/mob/living/carbon/C in GLOB.auspex_users)
-	if(!HAS_TRAIT(C, AUSPEX_TRAIT))
-		return
+		if(!HAS_TRAIT(C, AUSPEX_TRAIT))
+			return
 
 
 /atom/proc/get_direction(mob/user)
