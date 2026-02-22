@@ -213,7 +213,7 @@
 /obj/item/reagent_containers/glass/bucket,
 /obj/item/mop,
 /turf/open/floor/plating/circled,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "aaU" = (
 /obj/structure/lattice/catwalk,
 /turf/open/floor/plating/shit/border,
@@ -341,7 +341,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "abx" = (
 /obj/structure/chair/sofa/left,
 /obj/structure/sign/painting{
@@ -630,7 +630,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "acQ" = (
 /obj/effect/decal/cleanable/trash_wood,
 /turf/open/floor/plating/rough,
@@ -751,7 +751,7 @@
 "ads" = (
 /obj/effect/turf_decal/stripes/white/line,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "adt" = (
 /obj/structure/chair/wood{
 	dir = 8
@@ -812,7 +812,7 @@
 	},
 /obj/effect/decal/pallet,
 /turf/open/floor/plating/ship/lines,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "adF" = (
 /obj/effect/turf_decal/stripes{
 	dir = 8
@@ -858,7 +858,7 @@
 /area/vtm/interior/bianchiBank)
 "adS" = (
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "adU" = (
 /obj/structure/urinal{
 	pixel_y = 32
@@ -1806,7 +1806,7 @@
 "ahH" = (
 /obj/effect/decal/wallpaper/light,
 /turf/closed/wall/vampwall/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "ahI" = (
 /obj/structure/chair/sofa/corp/corner,
 /turf/open/floor/plating/granite/black,
@@ -1883,7 +1883,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "aid" = (
 /obj/effect/decal/cleanable/blood/footprints,
 /turf/open/floor/plating/rough/cave,
@@ -3943,7 +3943,7 @@
 /turf/open/floor/plasteel/stairs{
 	dir = 4
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "aqv" = (
 /obj/structure/rack/bubway/west,
 /obj/underplate/stuff{
@@ -6592,7 +6592,7 @@
 	pixel_y = 32
 	},
 /turf/open/openspace,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "aAK" = (
 /obj/structure/closet/crate/freezer/fridge,
 /obj/item/reagent_containers/food/condiment/mayonnaise{
@@ -8826,7 +8826,7 @@
 	icon = 'code/modules/wod13/32x48.dmi'
 	},
 /turf/open/floor/plating/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "aIW" = (
 /obj/effect/decal/wallpaper/low,
 /turf/closed/wall/vampwall/market/low/window/reinforced,
@@ -9131,7 +9131,7 @@
 /area/vtm/interior)
 "aKc" = (
 /turf/closed/wall/vampwall/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "aKf" = (
 /obj/machinery/light/prince{
 	pixel_y = 32
@@ -9278,7 +9278,7 @@
 	},
 /obj/effect/decal/ventilation_system,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "aKI" = (
 /obj/structure/table,
 /obj/item/reagent_containers/food/drinks/coffee/vampire,
@@ -9731,7 +9731,7 @@
 /obj/effect/decal/rugs,
 /obj/effect/decal/pallet,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "aMm" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -14068,7 +14068,7 @@
 	},
 /obj/effect/turf_decal/stripes/white/line,
 /turf/open/floor/plating/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "bcv" = (
 /obj/structure/lamppost/one,
 /turf/open/floor/plating/sidewalk/rich,
@@ -16068,7 +16068,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "bju" = (
 /obj/effect/decal/bordur{
 	dir = 9
@@ -16973,7 +16973,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "bnc" = (
 /obj/item/clothing/head/crown/fancy{
 	desc = "A crown that bears a striking resemblance to the missing Portugese crown jewels.";
@@ -18382,7 +18382,7 @@
 	},
 /obj/item/soap,
 /turf/open/floor/plating/circled,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "bsD" = (
 /obj/effect/turf_decal/weather/dirt,
 /turf/open/floor/plating/vampdirt,
@@ -20264,7 +20264,7 @@
 "bzU" = (
 /obj/structure/stairs/east,
 /turf/open/floor/plating/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "bzV" = (
 /obj/effect/overlay/coconut,
 /turf/open/floor/plating/vampbeach,
@@ -22380,9 +22380,9 @@
 /turf/open/floor/plating/bacotell,
 /area/vtm/clinic)
 "bHA" = (
-/obj/cargocrate,
+/obj/cargocrate/stand,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "bHB" = (
 /obj/structure/vampstatue/angel{
 	pixel_y = 12
@@ -22894,11 +22894,11 @@
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/unionsquare)
 "bKf" = (
-/obj/structure/stairs/ship{
-	dir = 4
+/obj/vampire_car/minivan/yellow{
+	dir = 8
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "bKh" = (
 /obj/machinery/light{
 	pixel_y = 32
@@ -23915,7 +23915,7 @@
 "cfa" = (
 /obj/fusebox,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "cfb" = (
 /obj/effect/decal/bordur{
 	dir = 8
@@ -24034,7 +24034,7 @@
 /obj/structure/lattice/catwalk,
 /obj/structure/marker_beacon,
 /turf/open/openspace,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "chp" = (
 /obj/structure/chair,
 /turf/open/floor/plating/vampplating,
@@ -25215,7 +25215,7 @@
 "cKo" = (
 /obj/structure/marker_beacon/burgundy,
 /turf/closed/wall/vampwall/rich/low,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "cKq" = (
 /obj/effect/decal/shadow{
 	pixel_y = -32
@@ -25343,7 +25343,7 @@
 /obj/structure/ship/cable,
 /obj/structure/marker_beacon/burgundy,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "cNf" = (
 /obj/structure/billiard_table,
 /turf/open/floor/plating/parquetry/old,
@@ -26021,7 +26021,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "deZ" = (
 /obj/structure/chair/plastic{
 	dir = 4
@@ -26181,7 +26181,7 @@
 /obj/structure/ship/knecht/full,
 /obj/effect/turf_decal/bot_white,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "dhT" = (
 /obj/structure/mirror{
 	pixel_y = 32
@@ -26781,7 +26781,7 @@
 	pixel_y = 32
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "dvD" = (
 /obj/effect/decal/ventilation_system{
 	dir = 5
@@ -27071,7 +27071,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover_alt"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "dBv" = (
 /obj/effect/decal/carpet{
 	icon_state = "greencarpet"
@@ -27258,7 +27258,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover_alt"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "dEV" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 4
@@ -27429,7 +27429,7 @@
 	pixel_y = 32
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "dIh" = (
 /obj/structure/chair/sofa/corner,
 /turf/open/floor/carpet/orange,
@@ -27635,7 +27635,7 @@
 /obj/item/cigbutt,
 /obj/effect/decal/pallet,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "dMK" = (
 /obj/structure/chair/sofa/corp/left,
 /turf/open/floor/plating/rough/cave,
@@ -28160,7 +28160,7 @@
 "dYg" = (
 /obj/structure/ship/bollard/alt,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "dYp" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 5
@@ -28238,7 +28238,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "dZT" = (
 /obj/effect/decal/bordur{
 	dir = 4
@@ -28531,7 +28531,7 @@
 /obj/structure/table/wood,
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/open/floor/plating/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "efe" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/plating/toilet,
@@ -29415,7 +29415,7 @@
 /turf/open/floor/plasteel/stairs{
 	dir = 8
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "eyF" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
@@ -29975,7 +29975,7 @@
 /obj/structure/table/wood,
 /obj/item/melee/vampirearms/knife,
 /turf/open/floor/plating/bacotell,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "eLG" = (
 /obj/structure/closet/crate/freezer/fridge,
 /obj/item/melee/vampirearms/baseball/hand,
@@ -30020,7 +30020,7 @@
 	picked_color = "Yellow"
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "eMH" = (
 /obj/effect/decal/bordur{
 	dir = 1
@@ -30506,7 +30506,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover_alt"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "eXP" = (
 /obj/structure/railing{
 	dir = 4
@@ -30792,7 +30792,7 @@
 "fdW" = (
 /obj/structure/ship/radar,
 /turf/closed/wall/vampwall/rich/low,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "fea" = (
 /obj/item/gun/magic/hook{
 	name = "Purge";
@@ -31539,7 +31539,7 @@
 	pixel_x = 16
 	},
 /turf/open/floor/plating/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "fwy" = (
 /obj/structure/vampipe_manifold_random{
 	pixel_y = 32
@@ -31931,7 +31931,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "fEG" = (
 /obj/structure/chair/wood/wings{
 	dir = 1
@@ -32547,6 +32547,11 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/police)
+"fST" = (
+/turf/open/floor/plasteel/stairs{
+	dir = 4
+	},
+/area/vtm/supply/ship)
 "fSU" = (
 /obj/item/chair/wood,
 /turf/open/floor/carpet,
@@ -33806,7 +33811,7 @@
 /obj/structure/ship/on_walls/blinker,
 /obj/effect/decal/rugs,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "guV" = (
 /obj/weapon_showcase,
 /obj/machinery/light{
@@ -33928,7 +33933,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover_alt"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "gwX" = (
 /obj/structure/table/wood,
 /obj/item/storage/fancy/cigarettes/dromedaryco{
@@ -34419,7 +34424,7 @@
 /obj/vampire_car/track,
 /obj/effect/decal/cleanable/trash_paper,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "gGU" = (
 /obj/structure/table,
 /obj/item/reagent_containers/food/drinks/drinkingglass/whiskey_shot,
@@ -34658,7 +34663,7 @@
 /area/vtm/interior/techshop)
 "gMW" = (
 /turf/closed/wall/vampwall/rich/low,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "gMZ" = (
 /obj/structure/toilet{
 	pixel_y = 16
@@ -35299,7 +35304,7 @@
 	},
 /obj/effect/decal/ventilation_system,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "gZt" = (
 /obj/effect/turf_decal/stripes{
 	dir = 8
@@ -35786,7 +35791,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "hkp" = (
 /obj/structure/closet/cabinet{
 	anchored = 1
@@ -35978,7 +35983,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "hnY" = (
 /obj/effect/decal/cleanable/trash_cardboard,
 /turf/open/floor/plating/rough,
@@ -36198,7 +36203,7 @@
 "htz" = (
 /obj/effect/decal/wallpaper/blue,
 /turf/closed/wall/vampwall/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "htC" = (
 /obj/machinery/mineral/equipment_vendor/fastfood/sodavendor{
 	pixel_y = 20
@@ -36514,7 +36519,7 @@
 /turf/open/floor/plasteel/stairs{
 	dir = 8
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "hAM" = (
 /obj/structure/railing{
 	dir = 8
@@ -36781,7 +36786,7 @@
 "hGL" = (
 /obj/structure/closet/cardboard,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "hHM" = (
 /obj/structure/chair/comfy/brown{
 	dir = 4
@@ -36886,7 +36891,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "hJg" = (
 /obj/structure/table/glass,
 /obj/item/reagent_containers/food/drinks/drinkingglass/pint,
@@ -37372,7 +37377,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/carpet/green,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "hSn" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 6
@@ -37618,7 +37623,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover_alt"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "hXW" = (
 /obj/structure/vampfence/rich,
 /obj/effect/decal/bordur{
@@ -37795,7 +37800,7 @@
 "iaR" = (
 /obj/effect/decal/rugs,
 /turf/open/floor/carpet/green,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "iaU" = (
 /mob/living/simple_animal/pet/cat/floppa{
 	name = "Floppa"
@@ -37916,7 +37921,7 @@
 	pixel_y = 16
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "icO" = (
 /obj/structure/table/wood,
 /obj/item/clipboard,
@@ -38403,7 +38408,7 @@
 	},
 /obj/structure/ship/bollard/alt,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "imm" = (
 /obj/structure/foodrack{
 	dir = 4
@@ -39192,7 +39197,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "iGl" = (
 /obj/effect/decal/bordur,
 /obj/effect/landmark/npcability,
@@ -39512,7 +39517,7 @@
 "iMx" = (
 /obj/structure/ship/bollard/alt,
 /turf/closed/wall/vampwall/rich/low,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "iMS" = (
 /obj/effect/landmark/npcactivity,
 /obj/effect/landmark/npcbeacon,
@@ -40191,7 +40196,7 @@
 	pixel_x = -16
 	},
 /turf/open/floor/plating/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "iZJ" = (
 /obj/structure/table/wood,
 /obj/item/gun/ballistic/rifle/boltaction/vampire,
@@ -40550,7 +40555,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/bacotell,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "jgM" = (
 /obj/item/melee/vampirearms/shovel,
 /turf/open/floor/plating/vampdirt,
@@ -40700,7 +40705,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover_alt"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "jkC" = (
 /obj/structure/chair/sofa,
 /turf/open/floor/plating/parquetry/old,
@@ -40999,7 +41004,7 @@
 /area/vtm/church)
 "jrn" = (
 /turf/open/floor/plating/circled,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "jrv" = (
 /obj/structure/closet/cardboard,
 /turf/open/floor/plating/sidewalkalt,
@@ -41116,7 +41121,7 @@
 	pixel_y = 32
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "jtZ" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 32
@@ -41331,7 +41336,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "jxv" = (
 /obj/structure/table,
 /obj/item/clothing/neck/stripedbluescarf,
@@ -41498,7 +41503,7 @@
 /area/vtm/clinic)
 "jzM" = (
 /turf/open/floor/plating/ship/lines,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "jzU" = (
 /obj/item/plaque{
 	anchored = 1;
@@ -42010,7 +42015,7 @@
 	pixel_x = -16
 	},
 /turf/open/floor/plating/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "jMg" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 10
@@ -42965,7 +42970,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "klL" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/beer/vampire,
@@ -43416,7 +43421,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "ktC" = (
 /obj/structure/table,
 /obj/structure/sign/poster/random{
@@ -44518,7 +44523,7 @@
 	name = "Ship Shutter"
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "kUC" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating/church,
@@ -44699,7 +44704,7 @@
 	},
 /obj/effect/decal/cleanable/trash_cardboard,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "kYR" = (
 /obj/machinery/button/door{
 	id = "undertownlow";
@@ -44735,7 +44740,7 @@
 	layer = 4
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "kZx" = (
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/endronoffice)
@@ -45489,7 +45494,7 @@
 /obj/structure/ship/knecht,
 /obj/effect/turf_decal/bot_white,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "lrq" = (
 /obj/structure/railing{
 	dir = 4
@@ -45528,7 +45533,7 @@
 	picked_color = "Olive"
 	},
 /turf/open/floor/plating/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "lrW" = (
 /obj/structure/vampipe_manifold_fixed{
 	pixel_y = 32
@@ -46085,7 +46090,7 @@
 "lEs" = (
 /obj/effect/decal/rugs,
 /turf/open/floor/plating/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "lEu" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -46204,7 +46209,7 @@
 "lGM" = (
 /obj/effect/decal/wallpaper/paper,
 /turf/closed/wall/vampwall/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "lGS" = (
 /obj/effect/decal/pallet,
 /obj/structure/closet/cardboard,
@@ -46547,7 +46552,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover_alt"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "lNK" = (
 /obj/structure/vampfence,
 /turf/open/floor/plating/concrete,
@@ -46801,7 +46806,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover_alt"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "lTm" = (
 /obj/structure/dresser,
 /turf/open/floor/plating/vampdirt,
@@ -47107,7 +47112,7 @@
 	},
 /obj/structure/marker_beacon/burgundy,
 /turf/open/floor/plating/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "maP" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 4
@@ -47311,7 +47316,7 @@
 /area/vtm/church)
 "mfq" = (
 /turf/closed/wall/vampwall/rich/low/window/reinforced,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "mfA" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/open/floor/plating/vampgrass,
@@ -47746,7 +47751,7 @@
 "mqM" = (
 /obj/structure/coclock,
 /turf/open/openspace,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "mqO" = (
 /obj/effect/decal/daroof,
 /turf/open/floor/plating/roofwalk,
@@ -47873,7 +47878,7 @@
 "mtu" = (
 /obj/structure/ship/cable,
 /turf/closed/wall/vampwall/rich/low,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "mtH" = (
 /obj/structure/closet/cardboard,
 /obj/item/reagent_containers/food/drinks/bottle/vodka,
@@ -48058,7 +48063,7 @@
 	picked_color = "Olive"
 	},
 /turf/open/floor/plating/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "mxP" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 1
@@ -48112,7 +48117,7 @@
 "mzm" = (
 /obj/effect/decal/wallpaper/grey,
 /turf/closed/wall/vampwall/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "mzn" = (
 /obj/structure/vampdoor/wood,
 /obj/effect/turf_decal/siding/white,
@@ -48148,7 +48153,7 @@
 "mAf" = (
 /obj/effect/turf_decal/siding,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "mAn" = (
 /obj/machinery/gibber/autogibber{
 	ignore_clothing = 1
@@ -48333,7 +48338,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/circled,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "mEq" = (
 /obj/structure/fluff/hedge{
 	pixel_y = 10
@@ -48451,7 +48456,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover_alt"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "mHf" = (
 /obj/item/clothing/gloves/vampire/latex,
 /obj/item/clothing/suit/pentex/pentex_labcoat,
@@ -48599,7 +48604,7 @@
 	},
 /obj/effect/decal/ventilation_system,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "mJx" = (
 /obj/effect/decal/graffiti,
 /turf/open/floor/plating/sidewalk,
@@ -48790,7 +48795,7 @@
 "mNN" = (
 /obj/vampire_car/track,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "mOt" = (
 /obj/structure/coclock/grandpa,
 /turf/open/floor/plating/parquetry,
@@ -48997,7 +49002,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "mUv" = (
 /obj/structure/spawner/mining{
 	mob_types = list(/mob/living/simple_animal/hostile/biter/hostile, /mob/living/simple_animal/hostile/fister/hostile);
@@ -49425,7 +49430,7 @@
 /obj/manholedown/alt,
 /obj/structure/lattice/catwalk,
 /turf/open/openspace,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "nex" = (
 /obj/structure/chair/sofa/corp/right{
 	dir = 4
@@ -49708,7 +49713,7 @@
 "njz" = (
 /obj/structure/table,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "njI" = (
 /obj/elevator_button_up{
 	id = 3;
@@ -50860,7 +50865,7 @@
 	},
 /obj/structure/closet/crate/bin,
 /turf/open/floor/plating/circled,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "nKp" = (
 /turf/open/floor/carpet/lone,
 /area/vtm/church)
@@ -51719,7 +51724,7 @@
 /area/vtm/interior)
 "obr" = (
 /turf/open/openspace,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "obt" = (
 /obj/item/clothing/suit/vampire/eod{
 	desc = "SFPD Breacher equipment. Provides best protection against nearly everything.";
@@ -51826,7 +51831,7 @@
 	},
 /obj/structure/curtain,
 /turf/open/floor/plating/circled,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "odo" = (
 /obj/structure/chair{
 	dir = 4
@@ -52723,7 +52728,7 @@
 "oxo" = (
 /obj/effect/decal/pallet,
 /turf/open/floor/plating/ship/lines,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "oxw" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/open/floor/plating/vampdirt,
@@ -52731,7 +52736,7 @@
 "oxy" = (
 /obj/machinery/griddle,
 /turf/open/floor/plating/bacotell,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "oxF" = (
 /obj/structure/vampfence{
 	dir = 8
@@ -53262,7 +53267,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover_alt"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "oJw" = (
 /obj/structure/closet/crate/freezer/fridge,
 /obj/item/food/cake/carrot,
@@ -53281,7 +53286,7 @@
 	},
 /obj/structure/vampdoor/supply,
 /turf/open/floor/plating/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "oJV" = (
 /obj/structure/closet/crate/large,
 /obj/effect/decal/pallet,
@@ -53518,7 +53523,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover_alt"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "oPN" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 6
@@ -53562,7 +53567,7 @@
 	picked_color = "Yellow"
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "oQA" = (
 /obj/structure/chair/comfy/brown{
 	dir = 8
@@ -53902,7 +53907,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/plating/bacotell,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "oWx" = (
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/shop)
@@ -54088,7 +54093,7 @@
 	dir = 4
 	},
 /turf/open/floor/carpet/green,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "paO" = (
 /obj/structure/gargoyle{
 	dir = 4;
@@ -54232,9 +54237,9 @@
 /obj/effect/turf_decal/siding{
 	dir = 1
 	},
-/obj/cargocrate,
+/obj/cargocrate/stand,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "pen" = (
 /obj/structure/table,
 /turf/open/floor/plating/sidewalkalt,
@@ -54812,7 +54817,7 @@
 	pixel_y = 12
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "prb" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 6
@@ -55090,7 +55095,7 @@
 	},
 /obj/structure/chair/wood,
 /turf/open/floor/plating/bacotell,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "pxp" = (
 /obj/structure/weedshit{
 	pixel_y = 4
@@ -56396,7 +56401,7 @@
 /turf/open/floor/plasteel/stairs{
 	dir = 8
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "qas" = (
 /obj/structure/table/wood/fancy/black,
 /obj/item/storage/book/bible,
@@ -56761,7 +56766,7 @@
 "qkm" = (
 /obj/item/cigbutt,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "qku" = (
 /obj/effect/decal/bordur{
 	dir = 8
@@ -57600,7 +57605,7 @@
 /area/vtm/interior/mansion)
 "qBl" = (
 /turf/open/floor/plasteel/stairs,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "qBv" = (
 /obj/structure/chair/stool/bar,
 /turf/open/floor/plating/parquetry/old,
@@ -57826,7 +57831,7 @@
 	},
 /obj/structure/ship/bollard/alt,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "qFD" = (
 /obj/structure/closet/crate/freezer/fridge,
 /obj/item/reagent_containers/food/drinks/beer/vampire,
@@ -57886,7 +57891,7 @@
 	},
 /obj/effect/turf_decal/stripes/white/line,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "qGk" = (
 /obj/structure/bookcase/random/reference,
 /turf/open/floor/plating/rough/cave,
@@ -58442,7 +58447,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover_alt"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "qRY" = (
 /obj/effect/landmark/start/archivist,
 /turf/open/floor/plating/parquetry/old,
@@ -58453,7 +58458,7 @@
 	dir = 9
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "qSg" = (
 /obj/machinery/iv_drip,
 /turf/open/floor/plating/toilet,
@@ -58746,7 +58751,7 @@
 	layer = 4
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "qZf" = (
 /obj/structure/fluff/hedge,
 /obj/machinery/light{
@@ -58924,7 +58929,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "rcU" = (
 /obj/effect/decal/asphaltline/alt{
 	pixel_x = -14
@@ -59104,7 +59109,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover_alt"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "rhb" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 1
@@ -59173,7 +59178,7 @@
 /obj/structure/trashcan,
 /obj/effect/decal/pallet,
 /turf/open/floor/plating/ship/lines,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "rjb" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 4
@@ -59690,7 +59695,7 @@
 "rwj" = (
 /obj/effect/decal/rugs,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "rwx" = (
 /obj/structure/chair/comfy/black{
 	dir = 4
@@ -59793,7 +59798,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "ryv" = (
 /obj/effect/decal/bordur{
 	dir = 4
@@ -59926,7 +59931,7 @@
 /obj/item/clothing/head/vampire/nazi,
 /obj/item/melee/vampirearms/fireaxe,
 /turf/open/floor/carpet/green,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "rBX" = (
 /obj/effect/decal/ventilation_system{
 	dir = 9
@@ -60748,7 +60753,7 @@
 	pixel_x = 8
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "rVL" = (
 /obj/structure/fluff/hedge,
 /obj/machinery/light{
@@ -61239,7 +61244,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover_alt"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "sfN" = (
 /obj/structure/closet/cardboard,
 /obj/fusebox,
@@ -61631,10 +61636,10 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover_alt"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "soH" = (
 /turf/closed/wall/vampwall/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "soK" = (
 /obj/structure/chair/office,
 /mob/living/carbon/human/npc/shop{
@@ -61815,7 +61820,7 @@
 	},
 /obj/structure/marker_beacon/burgundy,
 /turf/open/floor/plating/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "ssV" = (
 /obj/structure/table/wood/fancy/royalblack,
 /obj/item/flashlight/lamp/green{
@@ -61871,7 +61876,7 @@
 /turf/open/floor/plasteel/stairs{
 	dir = 4
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "suw" = (
 /obj/machinery/light/prince{
 	pixel_y = 32
@@ -62069,7 +62074,7 @@
 "sAk" = (
 /obj/effect/decal/wallpaper/blue,
 /turf/closed/wall/vampwall/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "sAw" = (
 /obj/item/clothing/head/vampire/police,
 /obj/item/clothing/under/vampire/police,
@@ -62646,7 +62651,7 @@
 "sNg" = (
 /obj/effect/landmark/sarcophagus,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "sNj" = (
 /obj/structure/curtain,
 /obj/machinery/shower{
@@ -63233,7 +63238,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover_alt"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "sYz" = (
 /obj/structure/chair/comfy{
 	dir = 8
@@ -63441,7 +63446,7 @@
 	picked_color = "Olive"
 	},
 /turf/closed/wall/vampwall/rich/low,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "tdZ" = (
 /obj/structure/flora/ausbushes/grassybush,
 /turf/open/floor/plating/vampgrass,
@@ -63991,7 +63996,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover_alt"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "tpa" = (
 /obj/structure/chair/comfy/black,
 /obj/item/megaphone,
@@ -64316,7 +64321,7 @@
 /turf/open/floor/plasteel/stairs{
 	dir = 8
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "tvU" = (
 /obj/structure/chair,
 /obj/police_department{
@@ -64720,7 +64725,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "tGO" = (
 /obj/structure/railing{
 	dir = 8
@@ -65352,7 +65357,7 @@
 /obj/structure/ship/knecht,
 /obj/effect/turf_decal/bot_white,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "tWU" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 5
@@ -65679,7 +65684,7 @@
 	dir = 10
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "ufj" = (
 /obj/effect/decal/pallet,
 /turf/open/floor/plating/asphalt,
@@ -66087,7 +66092,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover_alt"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "umU" = (
 /obj/effect/decal/ventilation_system{
 	dir = 8
@@ -66226,7 +66231,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "uqk" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 1
@@ -66329,14 +66334,9 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/cabinet)
 "usS" = (
-/obj/structure/ship/bollard/alt{
-	icon = 'code/modules/wod13/32x48.dmi';
-	icon_state = "gen";
-	density = 1;
-	name = "generator"
-	},
+/obj/generator,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "utd" = (
 /obj/structure/closet/crate/freezer/fridge,
 /obj/item/reagent_containers/food/drinks/beer/vampire,
@@ -66373,7 +66373,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "uug" = (
 /obj/structure/railing,
 /turf/open/floor/plating/saint,
@@ -66674,7 +66674,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "uAW" = (
 /obj/structure/chair/sofa/left,
 /obj/structure/sign/painting{
@@ -66967,7 +66967,7 @@
 /obj/item/food/vampire/pizza,
 /obj/item/food/vampire/pizza,
 /turf/open/floor/plating/bacotell,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "uGf" = (
 /obj/structure/table,
 /obj/item/clipboard,
@@ -67090,7 +67090,7 @@
 "uIm" = (
 /obj/effect/decal/rugs,
 /turf/open/floor/plating/circled,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "uIw" = (
 /obj/structure/chair/sofa/corp/right{
 	dir = 4
@@ -67530,7 +67530,7 @@
 	pixel_y = 32
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "uPp" = (
 /obj/structure/table/wood,
 /obj/item/paper,
@@ -67580,7 +67580,7 @@
 	pixel_y = 32
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "uQM" = (
 /obj/effect/decal/wallpaper/red/low,
 /obj/structure/table/wood,
@@ -68793,7 +68793,7 @@
 /turf/open/floor/plasteel/stairs{
 	dir = 4
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "vrF" = (
 /obj/structure/chair/comfy/brown{
 	dir = 4
@@ -69041,7 +69041,7 @@
 /area/vtm/interior/police)
 "vya" = (
 /turf/open/floor/carpet/green,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "vyh" = (
 /obj/structure/railing{
 	dir = 8
@@ -69117,7 +69117,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "vAo" = (
 /obj/structure/railing{
 	dir = 4
@@ -69588,7 +69588,7 @@
 /turf/open/floor/plasteel/stairs{
 	dir = 8
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "vIA" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 10
@@ -70020,7 +70020,7 @@
 "vRj" = (
 /obj/effect/decal/cleanable/trash_paper,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "vRK" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 9
@@ -70187,7 +70187,7 @@
 "vUJ" = (
 /obj/effect/decal/ventilation_system,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "vUN" = (
 /obj/effect/landmark/npcwall,
 /turf/open/floor/carpet/green,
@@ -70385,6 +70385,13 @@
 /obj/item/vtm_artifact/rand,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/interior)
+"vZO" = (
+/obj/structure/stairs/ship{
+	dir = 4;
+	pixel_x = -32
+	},
+/turf/open/floor/plating/ship/alt,
+/area/vtm/supply/ship)
 "vZY" = (
 /obj/structure/railing{
 	dir = 8
@@ -70640,7 +70647,7 @@
 	layer = 4
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "wfI" = (
 /obj/structure/table/wood/fancy/black,
 /obj/item/mystic_tome{
@@ -70976,7 +70983,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "wlW" = (
 /obj/structure/grib,
 /obj/effect/landmark/npcwall,
@@ -71002,7 +71009,7 @@
 "wmp" = (
 /obj/effect/decal/cleanable/trash_cardboard,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "wmx" = (
 /obj/effect/decal/ventilation_system{
 	dir = 8
@@ -71309,7 +71316,7 @@
 /area/vtm/interior/bianchiBank)
 "wtw" = (
 /turf/open/floor/plating/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "wtH" = (
 /obj/effect/decal/shadow,
 /obj/structure/railing{
@@ -71600,7 +71607,7 @@
 "wzP" = (
 /obj/manholeup/alt,
 /turf/open/floor/plating/ship/lines,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "wzX" = (
 /obj/structure/chair/comfy/beige{
 	dir = 8
@@ -71780,7 +71787,7 @@
 /obj/structure/ship/mooring_lines,
 /obj/effect/decal/pallet,
 /turf/open/floor/plating/ship/lines,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "wDz" = (
 /obj/structure/table,
 /obj/item/gun/ballistic/automatic/vampire/m1911,
@@ -71883,7 +71890,7 @@
 /turf/open/floor/plasteel/stairs{
 	dir = 4
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "wFS" = (
 /obj/structure/chair/sofa/corp/corner{
 	pixel_x = 7;
@@ -72784,7 +72791,7 @@
 /obj/effect/turf_decal/siding,
 /obj/effect/decal/ventilation_system,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "wYu" = (
 /obj/structure/railing{
 	dir = 4
@@ -73323,7 +73330,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover_alt"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "xlF" = (
 /obj/structure/chair/pew/left{
 	dir = 4
@@ -73467,7 +73474,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover_alt"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "xoR" = (
 /obj/effect/decal/pallet,
 /obj/structure/boxes,
@@ -73547,7 +73554,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "xqA" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 4
@@ -73676,7 +73683,7 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/vampdoor/supply,
 /turf/open/floor/plating/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "xua" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -73777,7 +73784,7 @@
 /turf/open/floor/plating/ship{
 	icon_state = "Cover"
 	},
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "xwq" = (
 /obj/structure/fluff/hedge,
 /obj/structure/railing{
@@ -73814,9 +73821,9 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/chinatown)
 "xxt" = (
-/obj/cargocrate,
+/obj/cargocrate/stand,
 /turf/open/floor/plating/ship,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "xxu" = (
 /obj/structure/table/wood/fancy/red,
 /obj/item/newspaper,
@@ -74376,7 +74383,7 @@
 	pixel_y = 16
 	},
 /turf/closed/wall/vampwall/rich/low,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "xKU" = (
 /obj/effect/decal/bordur{
 	dir = 8
@@ -74557,7 +74564,7 @@
 /obj/structure/ship/knecht/full,
 /obj/effect/turf_decal/bot_white,
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "xNJ" = (
 /obj/structure/vampdoor/simple{
 	dir = 8
@@ -75484,7 +75491,7 @@
 	picked_color = "Olive"
 	},
 /turf/open/floor/plating/ship/alt,
-/area/vtm/supply)
+/area/vtm/supply/ship)
 "ygt" = (
 /obj/effect/decal/pallet,
 /obj/structure/closet/crate/large,
@@ -142385,7 +142392,7 @@ aiw
 aKc
 mzm
 sug
-bsY
+fST
 wFR
 aKc
 aKc
@@ -143413,7 +143420,7 @@ mzm
 gGS
 mAf
 adS
-mNN
+bKf
 adS
 pel
 adS
@@ -145726,7 +145733,7 @@ adS
 adS
 mAf
 acP
-bKf
+adS
 acP
 klH
 adS
@@ -145983,7 +145990,7 @@ adS
 qSf
 wYt
 aKc
-adS
+vZO
 aKc
 mJo
 uff
@@ -209206,7 +209213,7 @@ soH
 soH
 soH
 vrD
-bsY
+fST
 aqu
 soH
 soH

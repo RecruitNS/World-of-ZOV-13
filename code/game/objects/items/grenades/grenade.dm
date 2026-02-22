@@ -182,6 +182,8 @@
 	if(active)
 		user.throw_item(target)
 
+/////// [T.WINER] - По просьбе Флава сделал так, что инициация взрыва происходит только при взрыве, в руке не идет
+
 /obj/item/grenade/throw_at()
 	. = ..()
 	if(active)
@@ -191,6 +193,7 @@
 	. = ..()
 	if(active)
 		addtimer(CALLBACK(src, PROC_REF(detonate)), det_time)
+
 /obj/item/grenade/equipped(mob/M, slot)
 	. = ..()
 	if(active && !(slot == ITEM_SLOT_HANDS))
