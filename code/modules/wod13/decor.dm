@@ -1336,6 +1336,7 @@
 		return
 	if(user.dancing)
 		return
+	else
 		obj_flags |= IN_USE
 		user.setDir(SOUTH)
 		user.Stun(100)

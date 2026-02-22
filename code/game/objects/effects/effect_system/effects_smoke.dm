@@ -145,6 +145,7 @@
 	var/matrix/M3
 
 /obj/effect/particle_effect/smoke/dust/Initialize(mapload)
+	. = ..()
 	create_reagents(500)
 	START_PROCESSING(SSobj, src)
 	M3 = matrix()

@@ -34,7 +34,6 @@
 	var/obj/effect/explosion_light/L
 	var/obj/effect/particle_effect/smoke/dust/D
 	var/obj/effect/temp_visual/dir_setting/crack_effect/C
-	var/turf/position
 //	pixel_x = -32
 //	pixel_y = -32
 
