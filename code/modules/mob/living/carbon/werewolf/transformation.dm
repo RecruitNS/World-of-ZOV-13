@@ -68,8 +68,6 @@
 	var/new_hp = transfer_to.maxHealth - HEALTH_THRESHOLD_DEAD
 	var/percentage = new_hp / old_hp
 
-	to_chat(world, "Percentage = [percentage]. transfer_to.max = [transfer_to.maxHealth], transfer_from.max = [transfer_from.maxHealth]")
-
 	transfer_to.adjustBruteLoss(round(transfer_from.getBruteLoss() * percentage) - transfer_to.getBruteLoss())
 	transfer_to.adjustFireLoss(round(transfer_from.getFireLoss() * percentage) - transfer_to.getFireLoss())
 	transfer_to.adjustToxLoss(round(transfer_from.getToxLoss() * percentage) - transfer_to.getToxLoss())
